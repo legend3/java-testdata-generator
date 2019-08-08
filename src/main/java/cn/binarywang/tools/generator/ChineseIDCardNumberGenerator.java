@@ -30,14 +30,14 @@ import java.util.Map;
  * X 9 8 7 6 5 4 3 2
  */
 public class ChineseIDCardNumberGenerator extends GenericGenerator {
-    private static GenericGenerator instance = new ChineseIDCardNumberGenerator();
+//    private static GenericGenerator instance = new ChineseIDCardNumberGenerator();//“饿汉”单例模式（线程安全），必须是static，可以直接使用，调用多次返回同一个对象。
 
-    private ChineseIDCardNumberGenerator() {
+    ChineseIDCardNumberGenerator() {
     }
 
-    public static GenericGenerator getInstance() {
-        return instance;
-    }
+//    public static GenericGenerator getInstance() {//在单例模式(保证一个类仅有一个实例，并提供一个访问它的全局访问点<public>)的类中常见，用来生成唯一的实例，getInstance往往是static的
+//        return instance;
+//    }
 
     /**
      * 生成签发机关：XXX公安局/XX区分局
@@ -63,10 +63,10 @@ public class ChineseIDCardNumberGenerator extends GenericGenerator {
     @Override
     public String generate() {
         Map<String, String> code = getAreaCode();
-        String areaCode = code.keySet().toArray(new String[0])[RandomUtils
-            .nextInt(0, code.size())]
-            + StringUtils.leftPad((RandomUtils.nextInt(0, 9998) + 1) + "", 4,
+        String areaCode = code.keySet().toArray(new String[0])[RandomUtils.nextInt(0, code.size())] + StringUtils.leftPad((RandomUtils.nextInt(0, 9998) + 1) + "", 4,
                 "0");
+
+
 
         String birthday = new SimpleDateFormat("yyyyMMdd").format(randomDate());
         String randomCode = String.valueOf(1000 + RandomUtils.nextInt(0, 999))

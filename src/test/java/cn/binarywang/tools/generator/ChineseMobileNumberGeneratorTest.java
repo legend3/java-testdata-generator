@@ -4,19 +4,21 @@ import static org.testng.AssertJUnit.assertNotNull;
 
 import org.testng.annotations.Test;
 
+import cn.binarywang.tools.generator.base.GenericGenerator;
+
 @Test
 public class ChineseMobileNumberGeneratorTest {
 
     public void testGenerate() {
-        String generatedMobileNum = ChineseMobileNumberGenerator.getInstance()
-            .generate();
+    	GenericGenerator instance = new ChineseMobileNumberGenerator();
+        String generatedMobileNum = instance.generate();
         assertNotNull(generatedMobileNum);
         System.err.println(generatedMobileNum);
     }
 
     public void testGgenerateFake() {
-        String generatedMobileNum = ChineseMobileNumberGenerator.getInstance()
-            .generateFake();
+    	ChineseMobileNumberGenerator instance = new ChineseMobileNumberGenerator();
+        String generatedMobileNum = instance.generateFake();
         assertNotNull(generatedMobileNum);
         System.err.println(generatedMobileNum);
     }

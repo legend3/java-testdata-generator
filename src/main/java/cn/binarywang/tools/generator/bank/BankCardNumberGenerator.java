@@ -21,14 +21,14 @@ import cn.binarywang.tools.generator.util.LuhnUtils;
  * </pre>
  */
 public class BankCardNumberGenerator extends GenericGenerator {
-    private static GenericGenerator instance = new BankCardNumberGenerator();
+//    private static GenericGenerator instance = new BankCardNumberGenerator();
 
-    private BankCardNumberGenerator() {
+    BankCardNumberGenerator() {
     }
 
-    public static GenericGenerator getInstance() {
-        return instance;
-    }
+//    public static GenericGenerator getInstance() {
+//        return instance;
+//    }
 
     @Override
     public String generate() {
