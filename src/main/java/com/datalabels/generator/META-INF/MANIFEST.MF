@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: F:\eclipse\dataLabel-testdata\target\classes\com\datalabels\
+ generator\CompanyName.class
+
