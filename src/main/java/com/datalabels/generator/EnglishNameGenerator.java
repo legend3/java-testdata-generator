@@ -574,14 +574,14 @@ public class EnglishNameGenerator extends GenericGenerator {
         "Vita",
         "Vivian"
     };
-    private static EnglishNameGenerator instance = new EnglishNameGenerator();
+//    private static EnglishNameGenerator instance = new EnglishNameGenerator();
 
-    private EnglishNameGenerator() {
+    EnglishNameGenerator() {
     }
 
-    public static EnglishNameGenerator getInstance() {
-        return instance;
-    }
+//    public static EnglishNameGenerator getInstance() {
+//        return instance;
+//    }
 
     @Override
     public String generate() {

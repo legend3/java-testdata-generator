@@ -4,14 +4,14 @@ import com.datalabels.generator.base.GenericGenerator;
 import org.apache.commons.lang3.RandomStringUtils;
 
 public class EmailAddressGenerator extends GenericGenerator {
-    private static GenericGenerator instance = new EmailAddressGenerator();
+//    private static GenericGenerator instance = new EmailAddressGenerator();
 
-    private EmailAddressGenerator() {
+    EmailAddressGenerator() {
     }
 
-    public static GenericGenerator getInstance() {
-        return instance;
-    }
+//    public static GenericGenerator getInstance() {
+//        return instance;
+//    }
 
     @Override
     public String generate() {

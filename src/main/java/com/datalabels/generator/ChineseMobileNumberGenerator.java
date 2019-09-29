@@ -9,14 +9,14 @@ public class ChineseMobileNumberGenerator extends GenericGenerator {
         181, 189, 134, 135, 136, 137, 138, 139, 150, 151, 152, 157, 158, 159,
         178, 182, 183, 184, 187, 188, 130, 131, 132, 155, 156, 176, 185, 186,
         145, 147, 170 };
-    private static ChineseMobileNumberGenerator instance = new ChineseMobileNumberGenerator();
+//    private static ChineseMobileNumberGenerator instance = new ChineseMobileNumberGenerator();
 
-    private ChineseMobileNumberGenerator() {
+    ChineseMobileNumberGenerator() {
     }
 
-    public static ChineseMobileNumberGenerator getInstance() {
-        return instance;
-    }
+//    public static ChineseMobileNumberGenerator getInstance() {
+//        return instance;
+//    }
 
     @Override
     public String generate() {
